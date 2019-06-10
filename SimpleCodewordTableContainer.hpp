@@ -17,5 +17,10 @@ public:
 	//Constructor copies histogram to sort it.
 	//Unclear if that's the desirable API or not. (Alternative is sorting mutable reference.)
 	SimpleCodewordTableContainer(std::vector<std::pair<char, int>> histogram);
+
+	std::string decode(const std::string& inString) const;
+
+private:
+	std::string get_char_string(char inChar) const;
 };
 

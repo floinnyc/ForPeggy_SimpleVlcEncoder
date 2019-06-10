@@ -8,6 +8,8 @@
 
 int main()
 {
-	SimpleHistogramContainer histogram("TOBEORNOTTOBEORTOBEORNOT");
+	std::string value("TOBEORNOTTOBEORTOBEORNOT");
+	SimpleHistogramContainer histogram(value);
 	SimpleCodewordTableContainer codewordTable(histogram.get_histogram());
+	std::cout << codewordTable.decode(value) << std::endl;
 }

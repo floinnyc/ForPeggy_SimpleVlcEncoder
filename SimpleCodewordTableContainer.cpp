@@ -22,3 +22,27 @@ SimpleCodewordTableContainer::SimpleCodewordTableContainer(std::vector<std::pair
 		std::cout << "key = " << code_to_word.first << " value = " << code_to_word.second << std::endl;
 	}
 }
+
+std::string SimpleCodewordTableContainer::decode(const std::string& inString) const
+{
+	std::string output("");
+
+	std::string::const_iterator itr;
+	for (itr = inString.begin(); itr < inString.end(); itr++)
+	{
+		output += get_char_string(*itr);
+	}
+
+	return output;
+}
+
+std::string SimpleCodewordTableContainer::get_char_string(char inChar) const
+{
+	std::vector<std::pair<char, std::string>>::const_iterator itr;
+	for (itr = codewordTable.begin(); itr < codewordTable.end(); itr++)
+	{
+		if (itr->first == inChar) {
+			return itr->second;
+		}
+	}
+}
