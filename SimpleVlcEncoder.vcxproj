@@ -151,7 +151,13 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="SimpleCodewordTableContainer.cpp" />
+    <ClCompile Include="SimpleHistogramContainer.cpp" />
     <ClCompile Include="SimpleVlcEncoder.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="SimpleCodewordTableContainer.hpp" />
+    <ClInclude Include="SimpleHistogramContainer.hpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
